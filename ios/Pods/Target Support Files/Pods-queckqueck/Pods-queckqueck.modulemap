@@ -1,0 +1,6 @@
+module Pods_queckqueck {
+  umbrella header "Pods-queckqueck-umbrella.h"
+
+  export *
+  module * { export * }
+}
