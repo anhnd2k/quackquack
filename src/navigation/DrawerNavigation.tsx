@@ -8,7 +8,7 @@ import {
 	DrawerItem,
 } from '@react-navigation/drawer';
 import Animated from 'react-native-reanimated';
-import StackNavigation from './StackNavigation';
+import StackNavigation, { navigationRoutes } from './StackNavigation';
 import { useTheme } from 'styled-components/native';
 import { extendTheme, useThemeContext } from '../Themes';
 
@@ -18,7 +18,7 @@ const DrawerContent = (props) => {
 	const themeContext = useThemeContext();
 	const { colors }: extendTheme = useTheme();
 
-	const [active, setActive] = useState('Home');
+	const [active, setActive] = useState('Main');
 	return (
 		<DrawerContentScrollView
 			styles={{ backgroundColor: '#ccc', flex: 1 }}
@@ -29,7 +29,19 @@ const DrawerContent = (props) => {
 				<DrawerItem
 					onPress={() => {
 						// eslint-disable-next-line react/prop-types
-						props.navigation.navigate('Home');
+						props.navigation.navigate(navigationRoutes.MAIN);
+						setActive('Main');
+					}}
+					activeTintColor="#fff"
+					focused={active === 'Main'}
+					label={({ focused }) => {
+						return <Text style={{ color: colors.white }}>Main</Text>;
+					}}
+				/>
+				<DrawerItem
+					onPress={() => {
+						// eslint-disable-next-line react/prop-types
+						props.navigation.navigate(navigationRoutes.HOME);
 						setActive('Home');
 					}}
 					activeTintColor="#fff"
@@ -41,7 +53,7 @@ const DrawerContent = (props) => {
 				<DrawerItem
 					onPress={() => {
 						// eslint-disable-next-line react/prop-types
-						props.navigation.navigate('Setting');
+						props.navigation.navigate(navigationRoutes.SETTING);
 						setActive('Setting');
 					}}
 					activeTintColor="#fff"

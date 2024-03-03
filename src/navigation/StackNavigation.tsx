@@ -6,10 +6,12 @@ import Animated from 'react-native-reanimated';
 import Home from '../components/Screens/Home';
 import Setting from '../components/Screens/Setting';
 import { NoHeader, TitleHeader } from './screenConfigs';
+import Main from '../components/Screens/Main/Main';
 
 const Stack = createStackNavigator();
 
 const defaultNavigationRoutes = {
+	MAIN: 'MAIN',
 	HOME: 'Home',
 	SETTING: 'Setting',
 } as const;
@@ -43,8 +45,9 @@ const StackNavigation = ({ style }: { style: ViewStyle }): React.ReactElement =>
 					gestureEnabled: false,
 					headerShown: false,
 				}}
-				initialRouteName={navigationRoutes.HOME}
+				initialRouteName={navigationRoutes.MAIN}
 			>
+				<Stack.Screen name={navigationRoutes.MAIN} component={Main} options={NoHeader} />
 				<Stack.Screen name={navigationRoutes.HOME} component={Home} options={NoHeader} />
 				<Stack.Screen
 					name={navigationRoutes.SETTING}
