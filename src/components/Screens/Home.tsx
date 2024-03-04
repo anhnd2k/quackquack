@@ -5,6 +5,7 @@ import { useTheme } from '@react-navigation/native';
 import { extendTheme } from 'src/Themes';
 import dimens from 'src/constants/dimens';
 import { useState, useEffect } from 'react';
+import ModalPortal from '../base/ModalPortal';
 
 function isLeap(year: number) {
 	if (year % 4 || (year % 100 === 0 && year % 400)) {
@@ -47,28 +48,68 @@ const getPresentDate = (): Date => {
 
 const Home = ({ style }: { style: ViewStyle }) => {
 	const colors: extendTheme = useTheme() as extendTheme;
+	const nowTime: Date = new Date();
+	const nowDate: number = nowTime.getDate();
+	const nowMonth: number = nowTime.getMonth() + 1;
+	const nowYear: number = nowTime.getFullYear();
+	const unixTimeNow: number = new Date().getTime();
 
-	const [datePresent, setDatePresent] = useState(new Date().getDate());
+	const [datePresent, setDatePresent] = useState<number>(nowDate);
+
+	const [monthPresent, setMonthPresent] = useState<number>(nowMonth);
+	const [yearPresent, setYearPresent] = useState<number>(nowYear);
 	const [data, setData] = useState<number[]>([]);
 
 	const styles = makeStyles(colors);
-	const presentDate: number = getPresentDate().getDate();
-	const presentMonth: number = getPresentDate().getMonth();
 
 	useEffect(() => {
-		setData(calendar(datePresent, 2024));
+		setData(calendar(monthPresent, yearPresent));
 		console.log('=====> render');
-	}, [datePresent]);
+	}, [monthPresent, yearPresent]);
+
+	const changeMonthCalender = (monthUpdate: number): void => {
+		if (monthUpdate >= 1 && monthUpdate <= 12) {
+			setMonthPresent(monthUpdate);
+		} else {
+			let yearNow: number = yearPresent;
+			if (monthUpdate === 0) {
+				yearNow = yearNow - 1;
+				setYearPresent(yearNow);
+				setMonthPresent(12);
+			} else if (monthUpdate === 13) {
+				yearNow = yearNow + 1;
+				setYearPresent(yearNow);
+				setMonthPresent(1);
+			}
+		}
+	};
+
+	const getUnixTimePresent = (date: number): string => {
+		return `${yearPresent}-${monthPresent < 10 ? `0${monthPresent}` : monthPresent}-${
+			date < 10 ? `0${date}` : date
+		}`;
+	};
+
+	const isActiveTouch = (date: number): boolean => {
+		const unixDayItem = new Date(getUnixTimePresent(date)).getTime();
+		return unixTimeNow > unixDayItem;
+	};
+
 	return (
 		<Animated.View style={[{ ...style, marginTop: dimens.statusBarHeight }, styles.component]}>
 			<View style={styles.pickDateYear}>
-				<TouchableOpacity onPress={() => setDatePresent(datePresent - 1)}>
+				<TouchableOpacity onPress={() => changeMonthCalender(monthPresent - 1)}>
 					<Text>Prev</Text>
 				</TouchableOpacity>
-				<TouchableOpacity>
-					<Text>{datePresent}/2024</Text>
+				<TouchableOpacity
+					onPress={() => {
+						console.log('ccp');
+						ModalPortal.show();
+					}}
+				>
+					<Text>{`${monthPresent} / ${yearPresent}`}</Text>
 				</TouchableOpacity>
-				<TouchableOpacity onPress={() => setDatePresent(datePresent + 1)}>
+				<TouchableOpacity onPress={() => changeMonthCalender(monthPresent + 1)}>
 					<Text>Next</Text>
 				</TouchableOpacity>
 			</View>
@@ -99,15 +140,16 @@ const Home = ({ style }: { style: ViewStyle }) => {
 			</View>
 			<View style={styles.listDate}>
 				{data?.map((day: number, index: number) => {
-					const isActiveTouch: boolean = day !== 0 && day <= presentDate;
-					const isDay: boolean = presentDate === day;
+					const isPresentMonth: boolean = monthPresent === nowMonth && yearPresent === nowYear;
+					const activeTouch: boolean = isActiveTouch(day);
+					const isDay: boolean = datePresent === day && isPresentMonth;
 					return (
-						<TouchableOpacity disabled={!isActiveTouch} style={styles.itemDay} key={index}>
+						<TouchableOpacity disabled={!activeTouch} style={styles.itemDay} key={index}>
 							<View
 								style={[
 									styles.childView,
 									day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
-									isActiveTouch && styles.dayActiveStyle,
+									activeTouch && styles.dayActiveStyle,
 									isDay && { backgroundColor: 'red' },
 								]}
 							/>

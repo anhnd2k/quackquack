@@ -7,6 +7,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from 'src/reduxStore';
 import ThemeManager from './src/Themes';
 import NetworkStatus from 'src/components/common/NetworkStatus';
+import ModalPortal from 'src/components/base/ModalPortal';
 
 const errorHandler = (e, isFatal) => {
 	if (isFatal) {
@@ -35,6 +36,7 @@ const App = () => {
 			</Provider>
 			<LoadingPortal />
 			<NetworkStatus />
+			<ModalPortal />
 		</>
 	);
 };
