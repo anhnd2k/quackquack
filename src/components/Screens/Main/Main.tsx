@@ -1,4 +1,12 @@
-import { StyleSheet, View, Text, TextStyle, StyleProp, TouchableOpacity } from 'react-native';
+import {
+	StyleSheet,
+	View,
+	Text,
+	TextStyle,
+	StyleProp,
+	TouchableOpacity,
+	GestureResponderEvent,
+} from 'react-native';
 import React from 'react';
 import { extendTheme } from 'src/Themes';
 import { useTheme } from '@react-navigation/native';
@@ -7,8 +15,26 @@ import { BottomTabBarButtonProps, createBottomTabNavigator } from '@react-naviga
 import Home from '../Home';
 import Setting from '../Setting';
 import Analytic from '../Analytic';
+import navigationService from 'src/navigation/navigationService';
+import { navigationRoutes } from 'src/navigation/StackNavigation';
+import DialogAlert from 'src/components/base/DialogAlert';
 
 const Tab = createBottomTabNavigator();
+
+interface Emoji {
+	id: number;
+	name: string;
+	gif: string;
+}
+
+const ListEmoji: Emoji[] = [
+	{ id: 1, name: 'Very Happy', gif: '' },
+	{ id: 2, name: 'Happy', gif: '' },
+	{ id: 3, name: 'Normal', gif: '' },
+	{ id: 4, name: 'Sad', gif: '' },
+	{ id: 5, name: 'Very Sad', gif: '' },
+	{ id: 6, name: 'Cry', gif: '' },
+];
 
 const tabBarOptions = (
 	data: any,
@@ -23,25 +49,50 @@ const tabBarOptions = (
 	);
 };
 
-const HomeCustom = ({ children, onPress }: BottomTabBarButtonProps) => (
-	<TouchableOpacity style={{ top: -20 }} onPress={onPress}>
-		<View
-			style={{
-				width: 70,
-				height: 70,
-				borderRadius: 35,
-				backgroundColor: '#fff',
-				justifyContent: 'center',
-				alignItems: 'center',
+const withEmojiMain = dimens.deviceWidth * 0.7;
+
+const HomeCustom = ({ children, onPress }: BottomTabBarButtonProps) => {
+	const currentRouterName = navigationService.getCurrentRouteName();
+	const isHomePlan = navigationRoutes.HOME === currentRouterName;
+	return (
+		<TouchableOpacity
+			activeOpacity={1}
+			style={{ top: -20 }}
+			onPress={(e: GestureResponderEvent | React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+				if (isHomePlan) {
+					console.log('pick emoji');
+					DialogAlert.showEmojiView(
+						<View style={stylesOutSiteMain.modalPickEmoji}>
+							<View style={stylesOutSiteMain.emojiBox}>
+								{ListEmoji.map((item: Emoji, idx: number) => {
+									return (
+										<TouchableOpacity
+											activeOpacity={0.5}
+											onPress={() => console.log(item.id)}
+											key={idx}
+											style={stylesOutSiteMain.itemEmoji}
+										>
+											<Text>{item.name}</Text>
+										</TouchableOpacity>
+									);
+								})}
+							</View>
+						</View>
+					);
+				} else {
+					onPress(e);
+				}
 			}}
 		>
-			<View style={{ width: 60, height: 60, backgroundColor: 'red', borderRadius: 30 }}>
-				{children}
+			<View style={stylesOutSiteMain.homeComponent}>
+				<View style={stylesOutSiteMain.homeStyle}>
+					{/* {children} */}
+					<Text>{isHomePlan ? 'Pick emoji' : navigationRoutes.HOME}</Text>
+				</View>
 			</View>
-		</View>
-	</TouchableOpacity>
-);
-
+		</TouchableOpacity>
+	);
+};
 const Main = () => {
 	const theme: extendTheme = useTheme() as extendTheme;
 	const styles = makeStyles(theme);
@@ -85,6 +136,36 @@ const Main = () => {
 
 export default Main;
 
+const stylesOutSiteMain = StyleSheet.create({
+	homeStyle: {
+		width: 60,
+		height: 60,
+		backgroundColor: 'red',
+		borderRadius: 30,
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	homeComponent: {
+		width: 70,
+		height: 70,
+		borderRadius: 35,
+		backgroundColor: '#fff',
+		justifyContent: 'center',
+		alignItems: 'center',
+	},
+	modalPickEmoji: { backgroundColor: 'red', marginBottom: 125, padding: 10, zIndex: 9999 },
+	itemEmoji: {
+		flexBasis: (withEmojiMain - 30) / 3,
+		justifyContent: 'center',
+		alignItems: 'center',
+		backgroundColor: '#fff',
+		marginBottom: 10,
+		marginHorizontal: 5,
+		padding: 10,
+	},
+	emojiBox: { flexWrap: 'wrap', width: withEmojiMain, flexDirection: 'row' },
+});
+
 const makeStyles = ({ colors }: extendTheme) =>
 	StyleSheet.create({
 		component: {
@@ -100,9 +181,9 @@ const makeStyles = ({ colors }: extendTheme) =>
 		},
 		bottomTab: {
 			position: 'absolute',
-			bottom: 25,
-			left: 20,
-			right: 20,
+			bottom: 10,
+			left: 10,
+			right: 10,
 			elevation: 0,
 			backgroundColor: colors.white,
 			height: 90,

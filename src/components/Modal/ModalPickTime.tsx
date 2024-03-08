@@ -82,7 +82,8 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	const flatListRef = useRef<FlatList>(null);
 	const scrollViewRef = useRef(null);
 
-	const [indexScroll, setIndexScroll] = useState(null);
+	const [indexScroll, setIndexScroll] = useState(0);
+	const [initScrollYear, setInitScrollYear] = useState<boolean>(false);
 
 	useEffect(() => {
 		const yearSumDefault = toYear - fromYear;
@@ -92,7 +93,7 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 		}
 		setYearList(arrayYear);
 		setTimeout(() => {
-			setIndexScroll(0);
+			setInitScrollYear(true);
 			setTimeout(() => {
 				flatListRef.current?.scrollToIndex({ index: 1, animated: true });
 			}, 1200);
@@ -100,7 +101,7 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	}, []);
 
 	useEffect(() => {
-		if (indexScroll === 0) {
+		if (initScrollYear) {
 			setTimeout(() => {
 				scrollViewRef.current.scrollTo({
 					x: dataSourceCords[yearList.indexOf(yearPicked) - 2] + 36,
@@ -109,7 +110,7 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 			}, 200);
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [indexScroll]);
+	}, [initScrollYear, yearPicked]);
 
 	const scrollPickYear = () => {
 		const indexTo = indexScroll === 0 ? 1 : 0;
@@ -230,7 +231,7 @@ export default ModalPickTime;
 
 const styles = StyleSheet.create({
 	main: {
-		width: (dimens.deviceWidth * 3) / 4,
+		width: dimens.deviceWidth * 0.75,
 	},
 	header: {
 		justifyContent: 'space-between',
@@ -238,8 +239,8 @@ const styles = StyleSheet.create({
 		marginVertical: 10,
 	},
 	itemWrap: {
-		flexBasis: '31%',
-		marginHorizontal: '1%',
+		flexBasis: (dimens.deviceWidth * 0.75 - 30) / 3,
+		marginHorizontal: 5,
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginBottom: 10,

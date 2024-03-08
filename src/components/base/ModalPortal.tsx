@@ -1,11 +1,17 @@
 import React from 'react';
-import { Modal, StyleSheet, View } from 'react-native';
+import { Modal, StyleSheet, TouchableOpacity, View } from 'react-native';
 
 type Props = Record<string, never>;
+
+type PropShow = {
+	children: React.ReactElement;
+	isTouchOutside: boolean;
+};
 
 type State = {
 	show: boolean;
 	children: React.ReactElement;
+	isTouchOutside: boolean;
 };
 
 class ModalPortal extends React.Component<Props, State> {
@@ -16,11 +22,12 @@ class ModalPortal extends React.Component<Props, State> {
 		this.state = {
 			show: false,
 			children: null,
+			isTouchOutside: false,
 		};
 		ModalPortal.modal = this;
 	}
 
-	static show(children) {
+	static show(children: PropShow) {
 		ModalPortal.modal.show(children);
 		console.log('show modal portal');
 	}
@@ -29,10 +36,10 @@ class ModalPortal extends React.Component<Props, State> {
 		ModalPortal.modal.dismiss();
 	}
 
-	show(props) {
+	show(props: PropShow) {
 		if (!this.showing) {
 			this.showing = true;
-			this.setState({ show: true, children: props });
+			this.setState({ show: true, children: props.children, isTouchOutside: props.isTouchOutside });
 		}
 	}
 
@@ -40,14 +47,23 @@ class ModalPortal extends React.Component<Props, State> {
 		if (this.showing) {
 			this.showing = false;
 			this.setState({ show: false });
+			if (this.state.isTouchOutside) {
+				this.setState({ isTouchOutside: false });
+			}
 		}
 	}
 
 	render() {
-		const { show, children } = this.state;
+		const { show, children, isTouchOutside } = this.state;
 		return (
 			<Modal animationType="fade" transparent statusBarTranslucent visible={show}>
-				<View style={styles.modal}>{children}</View>
+				{isTouchOutside ? (
+					<TouchableOpacity activeOpacity={1} onPressIn={() => this.dismiss()} style={styles.modal}>
+						{children}
+					</TouchableOpacity>
+				) : (
+					<View style={styles.modal}>{children}</View>
+				)}
 			</Modal>
 		);
 	}
@@ -57,9 +73,8 @@ export default ModalPortal;
 
 const styles = StyleSheet.create({
 	modal: {
-		backgroundColor: '#cccccc24',
-		justifyContent: 'center',
-		alignItems: 'center',
+		backgroundColor: '#00000036',
+		zIndex: 1,
 		flex: 1,
 	},
 });
