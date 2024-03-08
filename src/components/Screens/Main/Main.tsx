@@ -52,6 +52,7 @@ const Main = () => {
 				tabBarStyle: styles.bottomTab,
 				tabBarShowLabel: false,
 			}}
+			initialRouteName="Home"
 		>
 			<Tab.Screen
 				options={{

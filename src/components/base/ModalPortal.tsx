@@ -1,46 +1,42 @@
 import React from 'react';
-import { Animated, Modal, StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Modal, StyleSheet, View } from 'react-native';
 
 type Props = Record<string, never>;
 
 type State = {
 	show: boolean;
-	message: string;
+	children: React.ReactElement;
 };
 
 class ModalPortal extends React.Component<Props, State> {
-	showMessageTimeout: NodeJS.Timeout | null = null;
-	hideLoadingTimeout: NodeJS.Timeout | null = null;
-	textOpacity = new Animated.Value(0);
 	static modal: ModalPortal;
 	showing = false;
 	constructor(props: Props) {
 		super(props);
 		this.state = {
 			show: false,
-			message: '',
+			children: null,
 		};
 		ModalPortal.modal = this;
 	}
 
-	static show() {
-		ModalPortal.modal.show();
-		console.log('show');
+	static show(children) {
+		ModalPortal.modal.show(children);
+		console.log('show modal portal');
 	}
 
-	static hide() {
-		ModalPortal.modal.hide();
+	static dismiss() {
+		ModalPortal.modal.dismiss();
 	}
 
-	show() {
+	show(props) {
 		if (!this.showing) {
 			this.showing = true;
-			this.setState({ show: true });
+			this.setState({ show: true, children: props });
 		}
 	}
 
-	hide() {
+	dismiss() {
 		if (this.showing) {
 			this.showing = false;
 			this.setState({ show: false });
@@ -48,22 +44,10 @@ class ModalPortal extends React.Component<Props, State> {
 	}
 
 	render() {
-		const { show, message } = this.state;
+		const { show, children } = this.state;
 		return (
 			<Modal animationType="fade" transparent statusBarTranslucent visible={show}>
-				<View
-					style={{
-						backgroundColor: '#ccc',
-						justifyContent: 'center',
-						alignItems: 'center',
-						flex: 1,
-					}}
-				>
-					<Text>Modal Poratal</Text>
-					<TouchableOpacity onPress={() => this.hide()}>
-						<Text>Close</Text>
-					</TouchableOpacity>
-				</View>
+				<View style={styles.modal}>{children}</View>
 			</Modal>
 		);
 	}
@@ -73,29 +57,9 @@ export default ModalPortal;
 
 const styles = StyleSheet.create({
 	modal: {
-		flex: 1,
-	},
-	container: {
-		flex: 1,
+		backgroundColor: '#cccccc24',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: 'rgba(0, 0, 0, 0.8)',
-		zIndex: 20,
-	},
-	placeholder: {
-		height: 120,
-	},
-	messageContainer: {
-		alignSelf: 'stretch',
-		height: 120,
-	},
-	message: {
-		color: '#FFFFFF',
-		fontSize: 16,
-		marginHorizontal: 24,
-		textAlign: 'center',
-	},
-	loading: {
-		width: 175,
+		flex: 1,
 	},
 });

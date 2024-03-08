@@ -5,7 +5,8 @@ import { useTheme } from '@react-navigation/native';
 import { extendTheme } from 'src/Themes';
 import dimens from 'src/constants/dimens';
 import { useState, useEffect } from 'react';
-import ModalPortal from '../base/ModalPortal';
+import DialogAlert from 'src/components/base/DialogAlert';
+import ModalPickTime from '../Modal/ModalPickTime';
 
 function isLeap(year: number) {
 	if (year % 4 || (year % 100 === 0 && year % 400)) {
@@ -95,6 +96,11 @@ const Home = ({ style }: { style: ViewStyle }) => {
 		return unixTimeNow > unixDayItem;
 	};
 
+	const yearMonthPicked = (idMonth, idYear) => {
+		setYearPresent(idYear);
+		setMonthPresent(idMonth);
+	};
+
 	return (
 		<Animated.View style={[{ ...style, marginTop: dimens.statusBarHeight }, styles.component]}>
 			<View style={styles.pickDateYear}>
@@ -103,8 +109,13 @@ const Home = ({ style }: { style: ViewStyle }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => {
-						console.log('ccp');
-						ModalPortal.show();
+						DialogAlert.showCustomView(
+							<ModalPickTime
+								presentYear={yearPresent}
+								presentMonth={monthPresent}
+								onPress={(item) => yearMonthPicked(item.idMonth, item.idYear)}
+							/>
+						);
 					}}
 				>
 					<Text>{`${monthPresent} / ${yearPresent}`}</Text>
