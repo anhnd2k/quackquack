@@ -7,6 +7,7 @@ import dimens from 'src/constants/dimens';
 import { useState, useEffect } from 'react';
 import DialogAlert from 'src/components/base/DialogAlert';
 import ModalPickTime from '../Modal/ModalPickTime';
+import { getCurrentTime, dayToUnix, currentDayUnix, dayOfWeek } from 'src/constants/Times';
 
 function isLeap(year: number) {
 	if (year % 4 || (year % 100 === 0 && year % 400)) {
@@ -33,16 +34,6 @@ function calendar(month: number, year: number) {
 	return result;
 }
 
-const dayOfWeek = {
-	MONDAY: 'Thứ 2',
-	TUESDAY: 'Thứ 3',
-	WEDNESDAY: 'Thứ 4',
-	THURSDAY: 'Thứ 5',
-	FRIDAY: 'Thứ 6',
-	SATURDAY: 'Thứ 7',
-	SUNDAY: 'Chủ nhật',
-};
-
 const getPresentDate = (): Date => {
 	return new Date();
 };
@@ -53,10 +44,10 @@ const Home = ({ style }: { style: ViewStyle }) => {
 	const nowDate: number = nowTime.getDate();
 	const nowMonth: number = nowTime.getMonth() + 1;
 	const nowYear: number = nowTime.getFullYear();
-	const unixTimeNow: number = new Date().getTime();
+
+	const unixCurrentTime: number = currentDayUnix();
 
 	const [datePresent, setDatePresent] = useState<number>(nowDate);
-
 	const [monthPresent, setMonthPresent] = useState<number>(nowMonth);
 	const [yearPresent, setYearPresent] = useState<number>(nowYear);
 	const [data, setData] = useState<number[]>([]);
@@ -65,7 +56,6 @@ const Home = ({ style }: { style: ViewStyle }) => {
 
 	useEffect(() => {
 		setData(calendar(monthPresent, yearPresent));
-		console.log('=====> render');
 	}, [monthPresent, yearPresent]);
 
 	const changeMonthCalender = (monthUpdate: number): void => {
@@ -83,17 +73,6 @@ const Home = ({ style }: { style: ViewStyle }) => {
 				setMonthPresent(1);
 			}
 		}
-	};
-
-	const getUnixTimePresent = (date: number): string => {
-		return `${yearPresent}-${monthPresent < 10 ? `0${monthPresent}` : monthPresent}-${
-			date < 10 ? `0${date}` : date
-		}`;
-	};
-
-	const isActiveTouch = (date: number): boolean => {
-		const unixDayItem = new Date(getUnixTimePresent(date)).getTime();
-		return unixTimeNow > unixDayItem;
 	};
 
 	const yearMonthPicked = (idMonth, idYear) => {
@@ -151,11 +130,18 @@ const Home = ({ style }: { style: ViewStyle }) => {
 			</View>
 			<View style={styles.listDate}>
 				{data?.map((day: number, index: number) => {
-					const isPresentMonth: boolean = monthPresent === nowMonth && yearPresent === nowYear;
-					const activeTouch: boolean = isActiveTouch(day);
-					const isDay: boolean = datePresent === day && isPresentMonth;
+					const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, day);
+					const itemCurrentUnix = dayToUnix(itemCurrentTime);
+
+					const activeTouch = itemCurrentUnix <= unixCurrentTime;
+					const isDay = itemCurrentUnix === unixCurrentTime;
 					return (
-						<TouchableOpacity disabled={!activeTouch} style={styles.itemDay} key={index}>
+						<TouchableOpacity
+							onPress={() => console.log(itemCurrentTime)}
+							disabled={!activeTouch}
+							style={styles.itemDay}
+							key={index}
+						>
 							<View
 								style={[
 									styles.childView,
