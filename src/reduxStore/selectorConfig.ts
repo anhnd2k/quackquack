@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
+import { ReducerAppState } from './reducers/index';
 
-const selectConfig = (state: any) => state.configs;
-const selectToken = () => createSelector(selectConfig, (substate) => substate.token);
+const getEmoji = (state: ReducerAppState) => state.emoji;
 
-export { selectToken };
+export const getInfoEmoji = createSelector([getEmoji], (emoji) => emoji);

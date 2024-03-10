@@ -18,6 +18,9 @@ import Analytic from '../Analytic';
 import navigationService from 'src/navigation/navigationService';
 import { navigationRoutes } from 'src/navigation/StackNavigation';
 import DialogAlert from 'src/components/base/DialogAlert';
+import { useDispatch } from 'react-redux';
+import { PayLoadEmoji, setDailiEmoji } from 'src/reduxStore/actions/emoji';
+import { currentDayUnix } from 'src/constants/Times';
 
 const Tab = createBottomTabNavigator();
 
@@ -54,6 +57,16 @@ const withEmojiMain = dimens.deviceWidth * 0.7;
 const HomeCustom = ({ children, onPress }: BottomTabBarButtonProps) => {
 	const currentRouterName = navigationService.getCurrentRouteName();
 	const isHomePlan = navigationRoutes.HOME === currentRouterName;
+	const dispatch = useDispatch();
+
+	const setEmojiDaily = (idEmoji: number) => {
+		const payloadEmoji: PayLoadEmoji = {
+			idEmoji: idEmoji,
+			idDay: currentDayUnix(),
+		};
+		dispatch(setDailiEmoji(payloadEmoji));
+	};
+
 	return (
 		<TouchableOpacity
 			activeOpacity={1}
@@ -68,7 +81,7 @@ const HomeCustom = ({ children, onPress }: BottomTabBarButtonProps) => {
 									return (
 										<TouchableOpacity
 											activeOpacity={0.5}
-											onPress={() => console.log(item.id)}
+											onPress={() => setEmojiDaily(item.id)}
 											key={idx}
 											style={stylesOutSiteMain.itemEmoji}
 										>

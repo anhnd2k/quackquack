@@ -2,7 +2,7 @@ import { SET_EMOJI, UPDATE_EMOJI } from '../constants/emojiDali';
 
 export interface PayLoadEmoji {
 	idEmoji: number;
-	day: number;
+	idDay: number;
 }
 
 export interface payloadAction {

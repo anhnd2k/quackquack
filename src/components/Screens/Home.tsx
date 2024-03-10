@@ -5,9 +5,18 @@ import { useTheme } from '@react-navigation/native';
 import { extendTheme } from 'src/Themes';
 import dimens from 'src/constants/dimens';
 import { useState, useEffect } from 'react';
-import DialogAlert from 'src/components/base/DialogAlert';
-import ModalPickTime from '../Modal/ModalPickTime';
 import { getCurrentTime, dayToUnix, currentDayUnix, dayOfWeek } from 'src/constants/Times';
+import { useSelector } from 'react-redux';
+import { getInfoEmoji } from '../../reduxStore/selectorConfig';
+import DialogAlert from '../base/DialogAlert';
+import ModalPickTime from '../Modal/ModalPickTime';
+import { PayLoadEmoji } from 'src/reduxStore/actions/emoji';
+
+interface DataAfterFilter {
+	day: number;
+	emojiId: number;
+	image: string;
+}
 
 function isLeap(year: number) {
 	if (year % 4 || (year % 100 === 0 && year % 400)) {
@@ -21,7 +30,7 @@ function daysIn(month: number, year: number) {
 	return month === 2 ? 28 + isLeap(year) : 31 - (((month - 1) % 7) % 2);
 }
 
-function calendar(month: number, year: number) {
+function calendar(month: number, year: number): number[] {
 	const getMonthString = month < 10 ? `0${month}` : `${month}`;
 	const startIndex = new Date(year + '-' + getMonthString + '-01').getDay();
 	const endIndex = daysIn(month, year);
@@ -50,13 +59,36 @@ const Home = ({ style }: { style: ViewStyle }) => {
 	const [datePresent, setDatePresent] = useState<number>(nowDate);
 	const [monthPresent, setMonthPresent] = useState<number>(nowMonth);
 	const [yearPresent, setYearPresent] = useState<number>(nowYear);
-	const [data, setData] = useState<number[]>([]);
+	const [data, setData] = useState<DataAfterFilter[]>([]);
 
+	const infoEmoji = useSelector(getInfoEmoji);
+
+	// optimizition data compare
 	const styles = makeStyles(colors);
 
 	useEffect(() => {
-		setData(calendar(monthPresent, yearPresent));
-	}, [monthPresent, yearPresent]);
+		console.log('===>>>> Home render');
+		const listcalendar: number[] = calendar(monthPresent, yearPresent);
+		const infoEmojiCompare: PayLoadEmoji[] = infoEmoji?.infoEmoji;
+
+		const mapDataEmoji: DataAfterFilter[] = listcalendar.map((day) => {
+			const currentTime = getCurrentTime(yearPresent, monthPresent, day);
+			const currentUnix = dayToUnix(currentTime);
+			let emojiIdFind: number = null;
+			if (infoEmojiCompare !== null) {
+				const findEmoji = infoEmojiCompare.filter((itemData) => {
+					return currentUnix === itemData.idDay;
+				});
+				emojiIdFind = findEmoji[0] !== undefined ? findEmoji[0].idEmoji : null;
+			}
+			return {
+				day: day,
+				emojiId: emojiIdFind,
+				image: null,
+			};
+		});
+		setData(mapDataEmoji);
+	}, [monthPresent, yearPresent, infoEmoji]);
 
 	const changeMonthCalender = (monthUpdate: number): void => {
 		if (monthUpdate >= 1 && monthUpdate <= 12) {
@@ -129,15 +161,15 @@ const Home = ({ style }: { style: ViewStyle }) => {
 				</View>
 			</View>
 			<View style={styles.listDate}>
-				{data?.map((day: number, index: number) => {
-					const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, day);
+				{data?.map((data: DataAfterFilter, index: number) => {
+					const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, data.day);
 					const itemCurrentUnix = dayToUnix(itemCurrentTime);
 
 					const activeTouch = itemCurrentUnix <= unixCurrentTime;
 					const isDay = itemCurrentUnix === unixCurrentTime;
 					return (
 						<TouchableOpacity
-							onPress={() => console.log(itemCurrentTime)}
+							onPress={() => console.log(itemCurrentUnix)}
 							disabled={!activeTouch}
 							style={styles.itemDay}
 							key={index}
@@ -145,12 +177,14 @@ const Home = ({ style }: { style: ViewStyle }) => {
 							<View
 								style={[
 									styles.childView,
-									day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
+									data.day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
 									activeTouch && styles.dayActiveStyle,
 									isDay && { backgroundColor: 'red' },
 								]}
-							/>
-							<Text style={styles.textDay}>{day !== 0 ? day : ''}</Text>
+							>
+								<Text>{data?.emojiId}</Text>
+							</View>
+							<Text style={styles.textDay}>{data.day !== 0 ? data.day : ''}</Text>
 						</TouchableOpacity>
 					);
 				})}
