@@ -4,10 +4,11 @@ const Light = {
 	...DefaultTheme,
 	colors: {
 		...DefaultTheme.colors,
+		primaryColor: '#3ba4ca',
 		background: '#FFFFFF',
 		white: '#000000',
 		black: '#ffffff',
-		primary: '#FFAC30',
+		primary: '#ccc',
 		secondary: '#E14161',
 		grey: '#9d9fa3',
 		success: '#38C2B7',

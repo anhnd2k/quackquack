@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, Animated } from 'react-native';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ModalPortal from 'src/components/base/ModalPortal';
 import dimens from 'src/constants/dimens';
+import { useTheme } from '@react-navigation/native';
+import { extendTheme } from 'src/Themes';
 
 interface DataResult {
 	idMonth: number;
@@ -74,6 +76,8 @@ const toYear = 2100;
 const heightView: number = dimens.deviceHeight / 3;
 
 const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
+	const colors: extendTheme = useTheme() as extendTheme;
+	const styles = makeStyles(colors);
 	const [yearPicked, setYearPicked] = useState<number>(presentYear);
 	const [monthPicked, setMonthPicked] = useState<number>(presentMonth);
 	const [yearList, setYearList] = useState<number[]>([]);
@@ -82,8 +86,9 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	const flatListRef = useRef<FlatList>(null);
 	const scrollViewRef = useRef(null);
 
-	const [indexScroll, setIndexScroll] = useState(0);
+	const [indexScroll, setIndexScroll] = useState(1);
 	const [initScrollYear, setInitScrollYear] = useState<boolean>(false);
+	const [isDisableTouch, setIsDisableTouch] = useState(true);
 
 	useEffect(() => {
 		const yearSumDefault = toYear - fromYear;
@@ -96,6 +101,7 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 			setInitScrollYear(true);
 			setTimeout(() => {
 				flatListRef.current?.scrollToIndex({ index: 1, animated: true });
+				setIsDisableTouch(false);
 			}, 1200);
 		}, 100);
 	}, []);
@@ -112,21 +118,27 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [initScrollYear, yearPicked]);
 
-	const scrollPickYear = () => {
-		const indexTo = indexScroll === 0 ? 1 : 0;
+	const scrollPickYear = (isHidden: boolean) => {
+		let indexTo = null;
+		if (isHidden) {
+			indexTo = 1;
+		} else {
+			indexTo = indexScroll === 0 ? 1 : 0;
+		}
 		flatListRef.current.scrollToIndex({
 			index: indexTo,
 		});
 		setIndexScroll(indexTo);
 	};
 
-	const _onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
-		setIndexScroll(viewableItems[0].index);
-	}, []);
+	// const _onViewableItemsChanged = useCallback(({ viewableItems, changed }) => {
+	// 	setIndexScroll(viewableItems[0].index === 0 ? 1 : 0);
+	// }, []);
 
 	const renderYear = (year, idx) => {
 		return (
 			<TouchableOpacity
+				disabled={isDisableTouch}
 				onPress={() => setYearPicked(year)}
 				onLayout={(event) => {
 					const layout = event.nativeEvent.layout;
@@ -142,10 +154,10 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	};
 
 	return (
-		<View style={styles.main}>
+		<View style={[styles.main, { backgroundColor: colors.colors.primaryColor }]}>
 			<View style={styles.header}>
 				<Text>2024</Text>
-				<TouchableOpacity onPress={scrollPickYear}>
+				<TouchableOpacity onPress={() => scrollPickYear(false)}>
 					<Text>{presentYear}</Text>
 				</TouchableOpacity>
 				<Text>2024</Text>
@@ -153,8 +165,9 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 
 			<View style={styles.mainWrap}>
 				<FlatList
-					onViewableItemsChanged={_onViewableItemsChanged}
+					// onViewableItemsChanged={_onViewableItemsChanged}
 					// initialScrollIndex={1}
+					scrollEnabled={false}
 					onScrollToIndexFailed={(info) => {
 						const wait = new Promise((resolve) => setTimeout(resolve, 1200));
 						wait.then(() => {
@@ -189,7 +202,11 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 												const isPicked = item.id === monthPicked;
 												return (
 													<TouchableOpacity
-														onPress={() => setMonthPicked(item.id)}
+														disabled={isDisableTouch}
+														onPress={() => {
+															setMonthPicked(item.id);
+															scrollPickYear(true);
+														}}
 														key={idx}
 														style={[styles.itemWrap, isPicked ? styles.isPicked : styles.isNormal]}
 													>
@@ -229,55 +246,57 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 
 export default ModalPickTime;
 
-const styles = StyleSheet.create({
-	main: {
-		width: dimens.deviceWidth * 0.75,
-	},
-	header: {
-		justifyContent: 'space-between',
-		flexDirection: 'row',
-		marginVertical: 10,
-	},
-	itemWrap: {
-		flexBasis: (dimens.deviceWidth * 0.75 - 30) / 3,
-		marginHorizontal: 5,
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginBottom: 10,
-		paddingVertical: 10,
-		paddingHorizontal: 15,
-		borderRadius: 10,
-	},
-	isPicked: {
-		backgroundColor: 'red',
-	},
-	isNormal: {
-		backgroundColor: '#ccc',
-	},
-	mainWrap: {
-		height: heightView,
-		alignItems: 'center',
-	},
-	mainChild: { height: heightView, justifyContent: 'center' },
-	mainChildYear: {
-		height: heightView * 0.33,
-		backgroundColor: '#ccc',
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-	},
-	viewPickYear: {
-		backgroundColor: '#ccc',
-	},
-	mainChildMonth: { width: '100%', flexWrap: 'wrap', flexDirection: 'row' },
-	itemYear: {
-		justifyContent: 'center',
-		alignItems: 'center',
-		paddingHorizontal: 10,
-		marginHorizontal: 10,
-		backgroundColor: '#fff',
-		marginVertical: 20,
-		borderTopLeftRadius: 5,
-		borderBottomRightRadius: 5,
-	},
-});
+const makeStyles = ({ colors }: extendTheme) =>
+	StyleSheet.create({
+		main: {
+			width: dimens.deviceWidth * 0.75,
+			backgroundColor: colors.primaryColor,
+		},
+		header: {
+			justifyContent: 'space-between',
+			flexDirection: 'row',
+			marginVertical: 10,
+		},
+		itemWrap: {
+			flexBasis: (dimens.deviceWidth * 0.75 - 30) / 3,
+			marginHorizontal: 5,
+			justifyContent: 'center',
+			alignItems: 'center',
+			marginBottom: 10,
+			paddingVertical: 10,
+			paddingHorizontal: 15,
+			borderRadius: 10,
+		},
+		isPicked: {
+			backgroundColor: colors.primaryColor,
+		},
+		isNormal: {
+			backgroundColor: '#ccc',
+		},
+		mainWrap: {
+			height: heightView,
+			alignItems: 'center',
+		},
+		mainChild: { height: heightView, justifyContent: 'center' },
+		mainChildYear: {
+			height: heightView * 0.33,
+			backgroundColor: '#ccc',
+			flex: 1,
+			justifyContent: 'center',
+			alignItems: 'center',
+		},
+		viewPickYear: {
+			backgroundColor: '#ccc',
+		},
+		mainChildMonth: { width: '100%', flexWrap: 'wrap', flexDirection: 'row' },
+		itemYear: {
+			justifyContent: 'center',
+			alignItems: 'center',
+			paddingHorizontal: 10,
+			marginHorizontal: 10,
+			backgroundColor: '#fff',
+			marginVertical: 20,
+			borderTopLeftRadius: 5,
+			borderBottomRightRadius: 5,
+		},
+	});

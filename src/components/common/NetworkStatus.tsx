@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { StyleSheet, SafeAreaView, View, Modal, Text, TouchableOpacity } from 'react-native';
 import NetInfo from '@react-native-community/netinfo';
+import Svgs from 'src/constants/Svgs';
 
 const NetworkStatus = (): React.ReactElement => {
 	const [connected, setConnected] = React.useState<boolean>(true);
@@ -27,7 +28,9 @@ const NetworkStatus = (): React.ReactElement => {
 			<Modal animationType="fade" transparent statusBarTranslucent visible={!connected}>
 				<View style={styles.main}>
 					<View style={styles.content}>
-						<View style={styles.image}>{/* <Svgs.ErrorConnect width={112} height={91} /> */}</View>
+						<View style={styles.image}>
+							<Svgs.ErrorConnect width={112} height={91} />
+						</View>
 						<Text style={styles.txtLostConnect}>Đã mất kết nối!</Text>
 						<Text style={styles.txtCheck}>Vui lòng kiểm tra đường truyền Internet</Text>
 

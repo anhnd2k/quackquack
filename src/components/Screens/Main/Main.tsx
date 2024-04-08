@@ -21,6 +21,8 @@ import DialogAlert from 'src/components/base/DialogAlert';
 import { useDispatch } from 'react-redux';
 import { PayLoadEmoji, setDailiEmoji } from 'src/reduxStore/actions/emoji';
 import { currentDayUnix } from 'src/constants/Times';
+import IconImage from 'src/components/base/IconImage';
+import images from 'src/constants/images';
 
 const Tab = createBottomTabNavigator();
 
@@ -43,10 +45,12 @@ const tabBarOptions = (
 	data: any,
 	styleUnfocus: StyleProp<TextStyle>,
 	styleFocus: StyleProp<TextStyle>,
-	title: string
+	title: string,
+	icon: any
 ) => {
 	return (
 		<View>
+			<IconImage source={icon} />
 			<Text style={data.focused ? styleFocus : styleUnfocus}>{title}</Text>
 		</View>
 	);
@@ -121,7 +125,13 @@ const Main = () => {
 			<Tab.Screen
 				options={{
 					tabBarIcon: (dataRef) =>
-						tabBarOptions(dataRef, styles.textUnfocus, styles.textFocus, 'Analytic'),
+						tabBarOptions(
+							dataRef,
+							styles.textUnfocus,
+							styles.textFocus,
+							'Analytic',
+							images.chartIconActive
+						),
 				}}
 				name="Analytic"
 				component={Analytic}
@@ -129,7 +139,7 @@ const Main = () => {
 			<Tab.Screen
 				options={{
 					tabBarIcon: (dataRef) =>
-						tabBarOptions(dataRef, styles.textUnfocus, styles.textFocus, 'Home'),
+						tabBarOptions(dataRef, styles.textUnfocus, styles.textFocus, 'Home', null),
 					tabBarButton: (props) => <HomeCustom {...props} />,
 				}}
 				name="Home"
@@ -138,7 +148,13 @@ const Main = () => {
 			<Tab.Screen
 				options={{
 					tabBarIcon: (dataRef) =>
-						tabBarOptions(dataRef, styles.textUnfocus, styles.textFocus, 'Setting'),
+						tabBarOptions(
+							dataRef,
+							styles.textUnfocus,
+							styles.textFocus,
+							'Setting',
+							images.rightIcon
+						),
 				}}
 				name="Settings"
 				component={Setting}
@@ -166,7 +182,7 @@ const stylesOutSiteMain = StyleSheet.create({
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
-	modalPickEmoji: { backgroundColor: 'red', marginBottom: 125, padding: 10, zIndex: 9999 },
+	modalPickEmoji: { backgroundColor: 'red', marginBottom: 120 + 50, padding: 10, zIndex: 9999 },
 	itemEmoji: {
 		flexBasis: (withEmojiMain - 30) / 3,
 		justifyContent: 'center',
@@ -194,11 +210,11 @@ const makeStyles = ({ colors }: extendTheme) =>
 		},
 		bottomTab: {
 			position: 'absolute',
-			bottom: 10,
+			bottom: 0,
 			left: 10,
 			right: 10,
 			elevation: 0,
-			backgroundColor: colors.white,
+			backgroundColor: colors.primaryColor,
 			height: 90,
 			borderRadius: 15,
 		},

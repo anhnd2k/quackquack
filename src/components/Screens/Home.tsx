@@ -1,4 +1,4 @@
-import { Text, ViewStyle, StyleSheet, View, TouchableOpacity } from 'react-native';
+import { Text, ViewStyle, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import Animated from 'react-native-reanimated';
 import { useTheme } from '@react-navigation/native';
@@ -11,6 +11,9 @@ import { getInfoEmoji } from '../../reduxStore/selectorConfig';
 import DialogAlert from '../base/DialogAlert';
 import ModalPickTime from '../Modal/ModalPickTime';
 import { PayLoadEmoji } from 'src/reduxStore/actions/emoji';
+import IconImage from 'src/components/base/IconImage';
+import images from 'src/constants/images';
+import { homeStyle } from '../style/HomeStyle';
 
 interface DataAfterFilter {
 	day: number;
@@ -49,6 +52,7 @@ const getPresentDate = (): Date => {
 
 const Home = ({ style }: { style: ViewStyle }) => {
 	const colors: extendTheme = useTheme() as extendTheme;
+	const styles = homeStyle(colors);
 	const nowTime: Date = new Date();
 	const nowDate: number = nowTime.getDate();
 	const nowMonth: number = nowTime.getMonth() + 1;
@@ -64,7 +68,6 @@ const Home = ({ style }: { style: ViewStyle }) => {
 	const infoEmoji = useSelector(getInfoEmoji);
 
 	// optimizition data compare
-	const styles = makeStyles(colors);
 
 	useEffect(() => {
 		console.log('===>>>> Home render');
@@ -113,10 +116,14 @@ const Home = ({ style }: { style: ViewStyle }) => {
 	};
 
 	return (
-		<Animated.View style={[{ ...style, marginTop: dimens.statusBarHeight }, styles.component]}>
+		<Animated.ScrollView
+			style={[{ ...style, marginTop: dimens.statusBarHeight }, styles.component]}
+		>
+			<View style={styles.topHeader} />
+			{/* HEADER */}
 			<View style={styles.pickDateYear}>
 				<TouchableOpacity onPress={() => changeMonthCalender(monthPresent - 1)}>
-					<Text>Prev</Text>
+					<IconImage source={images.leftIcon} />
 				</TouchableOpacity>
 				<TouchableOpacity
 					onPress={() => {
@@ -132,130 +139,78 @@ const Home = ({ style }: { style: ViewStyle }) => {
 					<Text>{`${monthPresent} / ${yearPresent}`}</Text>
 				</TouchableOpacity>
 				<TouchableOpacity onPress={() => changeMonthCalender(monthPresent + 1)}>
-					<Text>Next</Text>
+					<IconImage source={images.rightIcon} />
 				</TouchableOpacity>
 			</View>
-			<View style={styles.tabDate}>
-				<View style={[styles.titleCalendar]}>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.SUNDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.MONDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.TUESDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.WEDNESDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.THURSDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.FRIDAY}</Text>
-					</View>
-					<View style={[styles.itemDayName]}>
-						<Text>{dayOfWeek.SATURDAY}</Text>
+			<View style={styles.zummiView}>
+				<View style={styles.wires} />
+				<View style={styles.wires} />
+			</View>
+			{/* HEADER */}
+			<View style={styles.mainClender}>
+				{/* CALENDER */}
+				<View style={styles.tabDate}>
+					<View style={[styles.titleCalendar]}>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.SUNDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.MONDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.TUESDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.WEDNESDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.THURSDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.FRIDAY}</Text>
+						</View>
+						<View style={[styles.itemDayName]}>
+							<Text>{dayOfWeek.SATURDAY}</Text>
+						</View>
 					</View>
 				</View>
-			</View>
-			<View style={styles.listDate}>
-				{data?.map((data: DataAfterFilter, index: number) => {
-					const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, data.day);
-					const itemCurrentUnix = dayToUnix(itemCurrentTime);
+				{/* CALENDER */}
+				{/* RENDER_CALENDER */}
+				<View style={styles.listDate}>
+					{data?.map((data: DataAfterFilter, index: number) => {
+						const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, data.day);
+						const itemCurrentUnix = dayToUnix(itemCurrentTime);
 
-					const activeTouch = itemCurrentUnix <= unixCurrentTime;
-					const isDay = itemCurrentUnix === unixCurrentTime;
-					return (
-						<TouchableOpacity
-							onPress={() => console.log(itemCurrentUnix)}
-							disabled={!activeTouch}
-							style={styles.itemDay}
-							key={index}
-						>
-							<View
-								style={[
-									styles.childView,
-									data.day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
-									activeTouch && styles.dayActiveStyle,
-									isDay && { backgroundColor: 'red' },
-								]}
+						const activeTouch = itemCurrentUnix <= unixCurrentTime;
+						const isDay = itemCurrentUnix === unixCurrentTime;
+						return (
+							<TouchableOpacity
+								onPress={() => console.log(itemCurrentUnix)}
+								disabled={!activeTouch}
+								style={styles.itemDay}
+								key={index}
 							>
-								<Text>{data?.emojiId}</Text>
-							</View>
-							<Text style={styles.textDay}>{data.day !== 0 ? data.day : ''}</Text>
-						</TouchableOpacity>
-					);
-				})}
+								<View
+									style={[
+										styles.childView,
+										data.day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
+										activeTouch && styles.dayActiveStyle,
+										isDay && { backgroundColor: 'red' },
+									]}
+								>
+									<Text>{data?.emojiId}</Text>
+								</View>
+								<Text style={styles.textDay}>{data.day !== 0 ? data.day : ''}</Text>
+							</TouchableOpacity>
+						);
+					})}
+				</View>
+				{/* RENDER_CALENDER */}
 			</View>
-		</Animated.View>
+			{/* VIEW BOTTOM */}
+			<View style={styles.bottomView} />
+		</Animated.ScrollView>
 	);
 };
 
-const makeStyles = ({ colors }: extendTheme) =>
-	StyleSheet.create({
-		component: {
-			padding: 10,
-		},
-		text: {
-			color: colors.white,
-		},
-		// pick year month
-		pickDateYear: {
-			width: '100%',
-			height: 50,
-			backgroundColor: 'red',
-			flexDirection: 'row',
-			justifyContent: 'space-between',
-			alignItems: 'center',
-			marginBottom: 10,
-		},
-		// calender style
-		tabDate: {
-			minWidth: 300,
-			borderBottomColor: 'white',
-			borderBottomWidth: 1,
-		},
-		titleCalendar: {
-			flexWrap: 'wrap',
-			flexDirection: 'row',
-			width: '100%',
-		},
-		itemDayName: {
-			flexBasis: '14.2%',
-			justifyContent: 'center',
-			alignItems: 'center',
-		},
-		itemDay: {
-			flexBasis: '14%',
-			justifyContent: 'center',
-			alignItems: 'center',
-			margin: 0.5,
-			height: (dimens.deviceWidth - 22) * 0.14 + 18,
-		},
-		childView: {
-			width: (dimens.deviceWidth - 22) * 0.14 * 0.9,
-			height: (dimens.deviceWidth - 22) * 0.14 * 0.9,
-			justifyContent: 'center',
-			alignItems: 'center',
-			borderRadius: ((dimens.deviceWidth - 22) * 0.14 * 0.9) / 2,
-			marginBottom: 4,
-		},
-		dayOfMonth: {
-			backgroundColor: '#f0ebeb',
-		},
-		noneOfMonth: {
-			backgroundColor: colors.background,
-		},
-		dayActiveStyle: { backgroundColor: '#ccc' },
-		listDate: {
-			flexDirection: 'row',
-			flexWrap: 'wrap',
-		},
-		textDay: {
-			fontSize: 12,
-			color: '#47b6e2',
-		},
-	});
 export default Home;

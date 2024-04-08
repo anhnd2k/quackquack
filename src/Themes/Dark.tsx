@@ -4,10 +4,11 @@ const Dark = {
 	...DarkTheme,
 	colors: {
 		...DarkTheme.colors,
+		primaryColor: '#3ba4ca',
 		background: '#171822',
 		white: '#ffffff',
 		black: '#000000',
-		primary: '#FFAC30',
+		primary: '#ccc',
 		secondary: '#03DAC5',
 		grey: '#9d9fa3',
 		success: '#38C2B7',
