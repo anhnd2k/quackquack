@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "pod": "cd ios && pod install & cd ..",
-    "ios-pro": "yarn ios --udid=\"DDE5B317-5FFE-429C-8227-F09F1FDF35FD\""
+    "ios-pro": "yarn ios --udid=\"0498AE60-8B46-4FB3-9BFD-1F053DCA7AED\""
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1",
