@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="/Users/ngohoanganh/Documents/React-Native/quackquack/android/app"
+    name=":app"
+    type="APP"
+    maven="queckqueck:app:"
+    gradle="7.1.1"
+    buildFolder="build"
+    bootClassPath="/Users/ngohoanganh/Library/Android/sdk/platforms/android-31/android.jar:/Users/ngohoanganh/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-31"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

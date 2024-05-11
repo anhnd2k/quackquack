@@ -24,7 +24,6 @@ export default class DialogAlert {
 
 const styles = StyleSheet.create({
 	mainCustomView: {
-		padding: 10,
 		backgroundColor: '#fff',
 	},
 	mainPickEmoji: {

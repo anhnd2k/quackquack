@@ -71,8 +71,8 @@ const monthPicks: MonthPick[] = [
 		text: 'Dec',
 	},
 ];
-const fromYear = 1990;
-const toYear = 2100;
+const fromYear = 2000;
+const toYear = 2050;
 const heightView: number = dimens.deviceHeight / 3;
 
 const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
@@ -80,7 +80,9 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	const styles = makeStyles(colors);
 	const [yearPicked, setYearPicked] = useState<number>(presentYear);
 	const [monthPicked, setMonthPicked] = useState<number>(presentMonth);
-	const [yearList, setYearList] = useState<number[]>([]);
+	const [yearList] = useState<number[]>(() => {
+		return Array.from(Array(toYear - fromYear)).map((_, index) => index + fromYear);
+	});
 	const [dataSourceCords, setDataSourceCords] = useState([]);
 
 	const flatListRef = useRef<FlatList>(null);
@@ -91,12 +93,6 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	const [isDisableTouch, setIsDisableTouch] = useState(true);
 
 	useEffect(() => {
-		const yearSumDefault = toYear - fromYear;
-		const arrayYear: number[] = [];
-		for (let i = 0; i <= yearSumDefault; i++) {
-			arrayYear.push(i + fromYear);
-		}
-		setYearList(arrayYear);
 		setTimeout(() => {
 			setInitScrollYear(true);
 			setTimeout(() => {
@@ -154,13 +150,13 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	};
 
 	return (
-		<View style={[styles.main, { backgroundColor: colors.colors.primaryColor }]}>
+		<View style={styles.main}>
 			<View style={styles.header}>
-				<Text>2024</Text>
+				<Text>Prev</Text>
 				<TouchableOpacity onPress={() => scrollPickYear(false)}>
 					<Text>{presentYear}</Text>
 				</TouchableOpacity>
-				<Text>2024</Text>
+				<Text>Next</Text>
 			</View>
 
 			<View style={styles.mainWrap}>
@@ -168,13 +164,13 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 					// onViewableItemsChanged={_onViewableItemsChanged}
 					// initialScrollIndex={1}
 					scrollEnabled={false}
-					onScrollToIndexFailed={(info) => {
-						const wait = new Promise((resolve) => setTimeout(resolve, 1200));
-						wait.then(() => {
-							flatListRef.current?.scrollToIndex({ index: info.index, animated: true });
-							setIndexScroll(info.index);
-						});
-					}}
+					// onScrollToIndexFailed={(info) => {
+					// 	const wait = new Promise((resolve) => setTimeout(resolve, 1200));
+					// 	wait.then(() => {
+					// 		flatListRef.current?.scrollToIndex({ index: info.index, animated: true });
+					// 		setIndexScroll(info.index);
+					// 	});
+					// }}
 					ref={flatListRef}
 					data={[1, 2]}
 					keyExtractor={(item) => JSON.stringify(item)}
@@ -185,7 +181,6 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 									<View key={index} style={styles.mainChildYear}>
 										<View style={styles.viewPickYear}>
 											<Animated.ScrollView
-												// pagingEnabled
 												ref={scrollViewRef}
 												scrollToOverflowEnabled={true}
 												scrollEventThrottle={1}
@@ -197,24 +192,24 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 									</View>
 								) : (
 									<View style={styles.mainChild}>
-										<View style={styles.mainChildMonth}>
-											{monthPicks.map((item: MonthPick, idx: number) => {
-												const isPicked = item.id === monthPicked;
-												return (
-													<TouchableOpacity
-														disabled={isDisableTouch}
-														onPress={() => {
-															setMonthPicked(item.id);
-															scrollPickYear(true);
-														}}
-														key={idx}
-														style={[styles.itemWrap, isPicked ? styles.isPicked : styles.isNormal]}
-													>
-														<Text>{item.text}</Text>
-													</TouchableOpacity>
-												);
-											})}
-										</View>
+										{/* <View style={styles.mainChildMonth}> */}
+										{monthPicks.map((item: MonthPick, idx: number) => {
+											const isPicked = item.id === monthPicked;
+											return (
+												<TouchableOpacity
+													disabled={isDisableTouch}
+													onPress={() => {
+														setMonthPicked(item.id);
+														scrollPickYear(true);
+													}}
+													key={idx}
+													style={[styles.itemWrap, isPicked ? styles.isPicked : styles.isNormal]}
+												>
+													<Text>{item.text}</Text>
+												</TouchableOpacity>
+											);
+										})}
+										{/* </View> */}
 									</View>
 								)}
 							</>
@@ -258,9 +253,8 @@ const makeStyles = ({ colors }: extendTheme) =>
 			marginVertical: 10,
 		},
 		itemWrap: {
-			flexBasis: (dimens.deviceWidth * 0.75 - 30) / 3,
-			marginHorizontal: 5,
-			justifyContent: 'center',
+			flexBasis: (dimens.deviceWidth * 0.75) / 3,
+			// marginHorizontal: 5,
 			alignItems: 'center',
 			marginBottom: 10,
 			paddingVertical: 10,
@@ -277,7 +271,12 @@ const makeStyles = ({ colors }: extendTheme) =>
 			height: heightView,
 			alignItems: 'center',
 		},
-		mainChild: { height: heightView, justifyContent: 'center' },
+		mainChild: {
+			height: heightView,
+			justifyContent: 'center',
+			flexDirection: 'row',
+			flexWrap: 'wrap',
+		},
 		mainChildYear: {
 			height: heightView * 0.33,
 			backgroundColor: '#ccc',

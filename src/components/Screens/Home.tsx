@@ -33,17 +33,41 @@ function daysIn(month: number, year: number) {
 	return month === 2 ? 28 + isLeap(year) : 31 - (((month - 1) % 7) % 2);
 }
 
-function calendar(month: number, year: number): number[] {
+function calendar(
+	month: number,
+	year: number,
+	infoEmojiCompare: PayLoadEmoji[],
+	monthPresent: number,
+	yearPresent: number
+): DataAfterFilter[] {
 	const getMonthString = month < 10 ? `0${month}` : `${month}`;
 	const startIndex = new Date(year + '-' + getMonthString + '-01').getDay();
 	const endIndex = daysIn(month, year);
-	const result = Array.apply(0, Array(35)).map(function () {
-		return 0;
-	});
+
+	// const result = Array.apply(0, Array(35)).map(function () {
+	// 	return 0;
+	// });
+
+	const listDataResule: DataAfterFilter[] = [];
+
 	for (let i = startIndex; i < endIndex + startIndex; i++) {
-		result[i] = i - startIndex + 1;
+		const day: number = i - startIndex + 1;
+		const currentTime = getCurrentTime(yearPresent, monthPresent, day);
+		const currentUnix = dayToUnix(currentTime);
+		let emojiIdFind: number = null;
+		if (infoEmojiCompare !== null) {
+			const findEmoji = infoEmojiCompare.filter((itemData) => {
+				return currentUnix === itemData.idDay;
+			});
+			emojiIdFind = findEmoji[0] !== undefined ? findEmoji[0].idEmoji : null;
+		}
+		listDataResule.push({
+			day: day,
+			emojiId: emojiIdFind,
+			image: null,
+		});
 	}
-	return result;
+	return listDataResule;
 }
 
 const getPresentDate = (): Date => {
@@ -71,26 +95,14 @@ const Home = ({ style }: { style: ViewStyle }) => {
 
 	useEffect(() => {
 		console.log('===>>>> Home render');
-		const listcalendar: number[] = calendar(monthPresent, yearPresent);
-		const infoEmojiCompare: PayLoadEmoji[] = infoEmoji?.infoEmoji;
-
-		const mapDataEmoji: DataAfterFilter[] = listcalendar.map((day) => {
-			const currentTime = getCurrentTime(yearPresent, monthPresent, day);
-			const currentUnix = dayToUnix(currentTime);
-			let emojiIdFind: number = null;
-			if (infoEmojiCompare !== null) {
-				const findEmoji = infoEmojiCompare.filter((itemData) => {
-					return currentUnix === itemData.idDay;
-				});
-				emojiIdFind = findEmoji[0] !== undefined ? findEmoji[0].idEmoji : null;
-			}
-			return {
-				day: day,
-				emojiId: emojiIdFind,
-				image: null,
-			};
-		});
-		setData(mapDataEmoji);
+		const listcalendar: DataAfterFilter[] = calendar(
+			monthPresent,
+			yearPresent,
+			infoEmoji?.infoEmoji,
+			monthPresent,
+			yearPresent
+		);
+		setData(listcalendar);
 	}, [monthPresent, yearPresent, infoEmoji]);
 
 	const changeMonthCalender = (monthUpdate: number): void => {

@@ -1,0 +1,113 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.queckqueck"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+12-->[:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+13-->[:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-76
+13-->[:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-73
+14    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+14-->[com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+14-->[com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+15    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+15-->[com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+15-->[com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
+16
+17    <application
+17-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:6:5-25:19
+18        android:name="com.queckqueck.MainApplication"
+18-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:7:7-38
+19        android:allowBackup="false"
+19-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:11:7-34
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:9:7-41
+22        android:label="@string/app_name"
+22-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:8:7-39
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:10:7-52
+24        android:theme="@style/AppTheme" >
+24-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:12:7-38
+25        <activity
+25-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:13:7-24:18
+26            android:name="com.queckqueck.MainActivity"
+26-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:14:9-37
+27            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+27-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:16:9-118
+28            android:exported="true"
+28-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:19:9-32
+29            android:label="@string/app_name"
+29-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:15:9-41
+30            android:launchMode="singleTask"
+30-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:17:9-40
+31            android:windowSoftInputMode="adjustResize" >
+31-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:18:9-51
+32            <intent-filter>
+32-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:20:9-23:25
+33                <action android:name="android.intent.action.MAIN" />
+33-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:21:13-65
+33-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:21:21-62
+34
+35                <category android:name="android.intent.category.LAUNCHER" />
+35-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:22:13-73
+35-->/Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:22:23-70
+36            </intent-filter>
+37        </activity>
+38        <activity android:name="com.masteratul.exceptionhandler.DefaultErrorScreen" >
+38-->[:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-11:20
+38-->[:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:19-84
+39        </activity>
+40        <activity
+40-->[com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+41            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+41-->[com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+42            android:exported="false"
+42-->[com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+43            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+43-->[com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+44
+45        <meta-data
+45-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+46            android:name="com.google.android.gms.version"
+46-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+47            android:value="@integer/google_play_services_version" />
+47-->[com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+48
+49        <provider
+49-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+50            android:name="androidx.startup.InitializationProvider"
+50-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+51            android:authorities="com.queckqueck.androidx-startup"
+51-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+52            android:exported="false" >
+52-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+53            <meta-data
+53-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+54                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+54-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+55                android:value="androidx.startup" />
+55-->[androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+56            <meta-data
+56-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+57                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+57-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+58                android:value="androidx.startup" />
+58-->[androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+59        </provider>
+60    </application>
+61
+62</manifest>

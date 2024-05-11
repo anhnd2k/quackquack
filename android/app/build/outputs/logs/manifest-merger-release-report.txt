@@ -1,0 +1,408 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+MERGED from [:react-native-community_async-storage] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/async-storage/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-12:12
+MERGED from [:lottie-react-native] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-appearance] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-appearance/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-config] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-config/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-device-info] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-14:12
+MERGED from [:react-native-gesture-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-safe-area-context] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-screens] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-svg] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.react:react-native:0.69.1] /Users/ngohoanganh/.gradle/caches/transforms-3/f7f848418e63fef4af4df3738c35f521/transformed/jetified-react-native-0.69.1-release/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/59db212543bf6847d500bc32383c75b1/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [org.webkit:android-jsc:r250230] /Users/ngohoanganh/.gradle/caches/transforms-3/3f83c266ccac6c7f2b518a076620525f/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-reanimated] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-reanimated/android/build/.transforms/c5b646cc40ec49bf478b601a442d3039/transformed/jetified-react-native-reanimated-69-jsc/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:fresco:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/561f301aa645dd1a0596e0c5ac75de35/transformed/jetified-fresco-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7e257749c9dddf8ff9fd1b9130dc6d8b/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b0b69d65dba0d4923a14f0961a76ba01/transformed/jetified-drawee-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/882e1cdea17c10bdb23d200d2d294a14/transformed/jetified-nativeimagefilters-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4af61c1e92bc00c535d19581ad3257e0/transformed/jetified-memory-type-native-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-java:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/73ffd7798898ba124884b4a6811c85bc/transformed/jetified-memory-type-java-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91680973657ca9bf5af8355b84bb8c42/transformed/jetified-imagepipeline-native-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f8a2f15c6f8a76b56d7a0d8c0fd5efba/transformed/jetified-memory-type-ashmem-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/e38850b2625300289a58751d00ee0979/transformed/jetified-imagepipeline-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8253bc1c929a921482d82982e29aed33/transformed/jetified-nativeimagetranscoder-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/00c8dce4075a1c59ac3a2e5811c0504c/transformed/jetified-imagepipeline-base-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.airbnb.android:lottie:5.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/e69b8a70578f578a76b1d42d42959808/transformed/jetified-lottie-5.1.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.material:material:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d66390e9f57cd03f4fe478c67b878d95/transformed/material-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/53122dfddfd0b682fe74c9823d5d0125/transformed/appcompat-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/d5101afae545245c9a52f3c42895aec2/transformed/jetified-appcompat-resources-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.autofill:autofill:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f69016c18ad8e69130f9e698c533f69e/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:middleware:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/879a56eb05e86d7be9bd97c1cb0f2a45/transformed/jetified-middleware-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:ui-common:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8832c78577a3c8817f00ac78dd4bb1c1/transformed/jetified-ui-common-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:soloader:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/bad663cac46452dd3d9e801213f08a02/transformed/jetified-soloader-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/ngohoanganh/.gradle/caches/transforms-3/6dfe711f64abfd21f5fa47082cc6df01/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8130e834aba3939b0cf1562fa1e0d08c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/0f7a32322eac228e1dda9262307c4d0b/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/ngohoanganh/.gradle/caches/transforms-3/6b0c34bc19d0cc78b54712f8cf552d2e/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4bcb328cc87eddca94a5c46cf6c2a72d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/2305f6938f90fccd28393fd4c7abe3ba/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/23a406646cb676fb5bddfed5dfe73ccc/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d17fedd83ff85f189072687d5103034d/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/ngohoanganh/.gradle/caches/transforms-3/7a0fa600d7800105db0a4c0a36df6cd0/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.4] /Users/ngohoanganh/.gradle/caches/transforms-3/23f64895234ce5ddabe0b031368ae23b/transformed/jetified-activity-1.2.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/22e17065179a41621f6ece388e0c6a07/transformed/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9047a4be4457b766c37031c61f6966c0/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a1bff1fdc9465ed29f6d1e3075c448cf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8dae38f267fe0f1f910143f6a3f44bb4/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/df7752e9527bd9b259817246252d4a31/transformed/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ef2d53bc7c5336aaa6b5878fe4e59765/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/ngohoanganh/.gradle/caches/transforms-3/acf3fb83ceadfedd448d825384079939/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91c8c0fccda81ac0b8df87a2abf031f7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c1f8e7c46c1c2461b57e794a0f77b760/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7fd16603d4dc1e854d22347f3abbe9dc/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/96f3f6eb51aaa020f81b1968e758f622/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d5e6a511310e250cf6222bd5e75a5d42/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6e6b29cd89890a6f3c36c9dbd75b0b59/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/18089265c50d844bee8f2067a1fc23f8/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/eee26bd1a4eadaa5738401954efc4159/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a2fdc6a80c9dd525f28758b98e9ed218/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c5157d5f5bc73ff44a5db941a1086ed0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6f64e02c1419b3068ab0e77fdbd87e6b/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7c6084c2c41125db75dbeece23fb5fbc/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b66f4be307ab98c91e2e884fd045091c/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ed88b00f702386782bf95c967a37c6a1/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/3fa205512d0db211ce7a7d4aef5f244b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b6d14b99bfd3e5a84d7e7f801d265a08/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4dc7ab9c43668a7a799bfd4806a70f82/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4c7513bc6dfa196d449632b3937dd8e3/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+	package
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:2:3-27
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:1-26:12
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:lottie-react-native] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-67
+MERGED from [:lottie-react-native] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:24:5-67
+	android:name
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:4:22-64
+application
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:6:5-25:19
+MERGED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-12:19
+MERGED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-12:19
+MERGED from [com.facebook.react:react-native:0.69.1] /Users/ngohoanganh/.gradle/caches/transforms-3/f7f848418e63fef4af4df3738c35f521/transformed/jetified-react-native-0.69.1-release/AndroidManifest.xml:9:5-20
+MERGED from [com.facebook.react:react-native:0.69.1] /Users/ngohoanganh/.gradle/caches/transforms-3/f7f848418e63fef4af4df3738c35f521/transformed/jetified-react-native-0.69.1-release/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/e69b8a70578f578a76b1d42d42959808/transformed/jetified-lottie-5.1.1/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:5.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/e69b8a70578f578a76b1d42d42959808/transformed/jetified-lottie-5.1.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d66390e9f57cd03f4fe478c67b878d95/transformed/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d66390e9f57cd03f4fe478c67b878d95/transformed/material-1.1.0/AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/ngohoanganh/.gradle/caches/transforms-3/6dfe711f64abfd21f5fa47082cc6df01/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/ngohoanganh/.gradle/caches/transforms-3/6dfe711f64abfd21f5fa47082cc6df01/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:11:5-20
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:26:5-20
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/2305f6938f90fccd28393fd4c7abe3ba/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/2305f6938f90fccd28393fd4c7abe3ba/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/23a406646cb676fb5bddfed5dfe73ccc/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/23a406646cb676fb5bddfed5dfe73ccc/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/eee26bd1a4eadaa5738401954efc4159/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/eee26bd1a4eadaa5738401954efc4159/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:25:5-31:19
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:11:5-20
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:8:7-39
+	android:roundIcon
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:10:7-52
+	android:icon
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:9:7-41
+	android:allowBackup
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:11:7-34
+	android:theme
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:12:7-38
+	android:name
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:7:7-38
+activity#com.queckqueck.MainActivity
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:13:7-24:18
+	android:label
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:15:9-41
+	android:launchMode
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:17:9-40
+	android:windowSoftInputMode
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:18:9-51
+	android:exported
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:19:9-32
+	android:configChanges
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:16:9-118
+	android:name
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:14:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:20:9-23:25
+action#android.intent.action.MAIN
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:21:13-65
+	android:name
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:21:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:22:13-73
+	android:name
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml:22:23-70
+uses-sdk
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+MERGED from [:react-native-community_async-storage] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/async-storage/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_async-storage] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/async-storage/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:lottie-react-native] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/lottie-react-native/src/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-appearance] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-appearance/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-appearance] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-appearance/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-config] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-config/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-config] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-config/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-device-info] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-device-info] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-device-info/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-gesture-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-gesture-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-safe-area-context] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-safe-area-context/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-screens] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-screens/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-svg/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.69.1] /Users/ngohoanganh/.gradle/caches/transforms-3/f7f848418e63fef4af4df3738c35f521/transformed/jetified-react-native-0.69.1-release/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.react:react-native:0.69.1] /Users/ngohoanganh/.gradle/caches/transforms-3/f7f848418e63fef4af4df3738c35f521/transformed/jetified-react-native-0.69.1-release/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/59db212543bf6847d500bc32383c75b1/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/59db212543bf6847d500bc32383c75b1/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [org.webkit:android-jsc:r250230] /Users/ngohoanganh/.gradle/caches/transforms-3/3f83c266ccac6c7f2b518a076620525f/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r250230] /Users/ngohoanganh/.gradle/caches/transforms-3/3f83c266ccac6c7f2b518a076620525f/transformed/jetified-android-jsc-r250230/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-reanimated] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-reanimated/android/build/.transforms/c5b646cc40ec49bf478b601a442d3039/transformed/jetified-react-native-reanimated-69-jsc/AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-reanimated] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-reanimated/android/build/.transforms/c5b646cc40ec49bf478b601a442d3039/transformed/jetified-react-native-reanimated-69-jsc/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/561f301aa645dd1a0596e0c5ac75de35/transformed/jetified-fresco-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/561f301aa645dd1a0596e0c5ac75de35/transformed/jetified-fresco-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7e257749c9dddf8ff9fd1b9130dc6d8b/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7e257749c9dddf8ff9fd1b9130dc6d8b/transformed/jetified-imagepipeline-okhttp3-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b0b69d65dba0d4923a14f0961a76ba01/transformed/jetified-drawee-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b0b69d65dba0d4923a14f0961a76ba01/transformed/jetified-drawee-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/882e1cdea17c10bdb23d200d2d294a14/transformed/jetified-nativeimagefilters-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/882e1cdea17c10bdb23d200d2d294a14/transformed/jetified-nativeimagefilters-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4af61c1e92bc00c535d19581ad3257e0/transformed/jetified-memory-type-native-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4af61c1e92bc00c535d19581ad3257e0/transformed/jetified-memory-type-native-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/73ffd7798898ba124884b4a6811c85bc/transformed/jetified-memory-type-java-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-java:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/73ffd7798898ba124884b4a6811c85bc/transformed/jetified-memory-type-java-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91680973657ca9bf5af8355b84bb8c42/transformed/jetified-imagepipeline-native-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-native:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91680973657ca9bf5af8355b84bb8c42/transformed/jetified-imagepipeline-native-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f8a2f15c6f8a76b56d7a0d8c0fd5efba/transformed/jetified-memory-type-ashmem-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:memory-type-ashmem:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f8a2f15c6f8a76b56d7a0d8c0fd5efba/transformed/jetified-memory-type-ashmem-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/e38850b2625300289a58751d00ee0979/transformed/jetified-imagepipeline-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/e38850b2625300289a58751d00ee0979/transformed/jetified-imagepipeline-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8253bc1c929a921482d82982e29aed33/transformed/jetified-nativeimagetranscoder-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8253bc1c929a921482d82982e29aed33/transformed/jetified-nativeimagetranscoder-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/00c8dce4075a1c59ac3a2e5811c0504c/transformed/jetified-imagepipeline-base-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/00c8dce4075a1c59ac3a2e5811c0504c/transformed/jetified-imagepipeline-base-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/e69b8a70578f578a76b1d42d42959808/transformed/jetified-lottie-5.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:5.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/e69b8a70578f578a76b1d42d42959808/transformed/jetified-lottie-5.1.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d66390e9f57cd03f4fe478c67b878d95/transformed/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d66390e9f57cd03f4fe478c67b878d95/transformed/material-1.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/53122dfddfd0b682fe74c9823d5d0125/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/53122dfddfd0b682fe74c9823d5d0125/transformed/appcompat-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/d5101afae545245c9a52f3c42895aec2/transformed/jetified-appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.4.1] /Users/ngohoanganh/.gradle/caches/transforms-3/d5101afae545245c9a52f3c42895aec2/transformed/jetified-appcompat-resources-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f69016c18ad8e69130f9e698c533f69e/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/f69016c18ad8e69130f9e698c533f69e/transformed/jetified-autofill-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:middleware:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/879a56eb05e86d7be9bd97c1cb0f2a45/transformed/jetified-middleware-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:middleware:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/879a56eb05e86d7be9bd97c1cb0f2a45/transformed/jetified-middleware-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8832c78577a3c8817f00ac78dd4bb1c1/transformed/jetified-ui-common-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:ui-common:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8832c78577a3c8817f00ac78dd4bb1c1/transformed/jetified-ui-common-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/bad663cac46452dd3d9e801213f08a02/transformed/jetified-soloader-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:soloader:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/bad663cac46452dd3d9e801213f08a02/transformed/jetified-soloader-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/ngohoanganh/.gradle/caches/transforms-3/6dfe711f64abfd21f5fa47082cc6df01/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.10.3] /Users/ngohoanganh/.gradle/caches/transforms-3/6dfe711f64abfd21f5fa47082cc6df01/transformed/jetified-soloader-0.10.3/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8130e834aba3939b0cf1562fa1e0d08c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8130e834aba3939b0cf1562fa1e0d08c/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/0f7a32322eac228e1dda9262307c4d0b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/0f7a32322eac228e1dda9262307c4d0b/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/ngohoanganh/.gradle/caches/transforms-3/6b0c34bc19d0cc78b54712f8cf552d2e/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.6.0] /Users/ngohoanganh/.gradle/caches/transforms-3/6b0c34bc19d0cc78b54712f8cf552d2e/transformed/jetified-core-ktx-1.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4bcb328cc87eddca94a5c46cf6c2a72d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4bcb328cc87eddca94a5c46cf6c2a72d/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/2305f6938f90fccd28393fd4c7abe3ba/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/2305f6938f90fccd28393fd4c7abe3ba/transformed/jetified-play-services-stats-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/23a406646cb676fb5bddfed5dfe73ccc/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/23a406646cb676fb5bddfed5dfe73ccc/transformed/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d17fedd83ff85f189072687d5103034d/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d17fedd83ff85f189072687d5103034d/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/ngohoanganh/.gradle/caches/transforms-3/7a0fa600d7800105db0a4c0a36df6cd0/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/ngohoanganh/.gradle/caches/transforms-3/7a0fa600d7800105db0a4c0a36df6cd0/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] /Users/ngohoanganh/.gradle/caches/transforms-3/23f64895234ce5ddabe0b031368ae23b/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.4] /Users/ngohoanganh/.gradle/caches/transforms-3/23f64895234ce5ddabe0b031368ae23b/transformed/jetified-activity-1.2.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/22e17065179a41621f6ece388e0c6a07/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/22e17065179a41621f6ece388e0c6a07/transformed/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9047a4be4457b766c37031c61f6966c0/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9047a4be4457b766c37031c61f6966c0/transformed/jetified-emoji2-views-helper-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a1bff1fdc9465ed29f6d1e3075c448cf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a1bff1fdc9465ed29f6d1e3075c448cf/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8dae38f267fe0f1f910143f6a3f44bb4/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/8dae38f267fe0f1f910143f6a3f44bb4/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/df7752e9527bd9b259817246252d4a31/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/df7752e9527bd9b259817246252d4a31/transformed/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ef2d53bc7c5336aaa6b5878fe4e59765/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ef2d53bc7c5336aaa6b5878fe4e59765/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/ngohoanganh/.gradle/caches/transforms-3/acf3fb83ceadfedd448d825384079939/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/ngohoanganh/.gradle/caches/transforms-3/acf3fb83ceadfedd448d825384079939/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91c8c0fccda81ac0b8df87a2abf031f7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/91c8c0fccda81ac0b8df87a2abf031f7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c1f8e7c46c1c2461b57e794a0f77b760/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c1f8e7c46c1c2461b57e794a0f77b760/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.7.0] /Users/ngohoanganh/.gradle/caches/transforms-3/efc5fbdc5cddabff1e6dbe6ad771c56d/transformed/core-1.7.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7fd16603d4dc1e854d22347f3abbe9dc/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7fd16603d4dc1e854d22347f3abbe9dc/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/96f3f6eb51aaa020f81b1968e758f622/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/96f3f6eb51aaa020f81b1968e758f622/transformed/jetified-lifecycle-viewmodel-savedstate-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d5e6a511310e250cf6222bd5e75a5d42/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d5e6a511310e250cf6222bd5e75a5d42/transformed/jetified-savedstate-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6e6b29cd89890a6f3c36c9dbd75b0b59/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6e6b29cd89890a6f3c36c9dbd75b0b59/transformed/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/18089265c50d844bee8f2067a1fc23f8/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/18089265c50d844bee8f2067a1fc23f8/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/eee26bd1a4eadaa5738401954efc4159/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/ngohoanganh/.gradle/caches/transforms-3/eee26bd1a4eadaa5738401954efc4159/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a2fdc6a80c9dd525f28758b98e9ed218/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a2fdc6a80c9dd525f28758b98e9ed218/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c5157d5f5bc73ff44a5db941a1086ed0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/c5157d5f5bc73ff44a5db941a1086ed0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6f64e02c1419b3068ab0e77fdbd87e6b/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/ngohoanganh/.gradle/caches/transforms-3/6f64e02c1419b3068ab0e77fdbd87e6b/transformed/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7c6084c2c41125db75dbeece23fb5fbc/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7c6084c2c41125db75dbeece23fb5fbc/transformed/lifecycle-runtime-2.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b66f4be307ab98c91e2e884fd045091c/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b66f4be307ab98c91e2e884fd045091c/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ed88b00f702386782bf95c967a37c6a1/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/ed88b00f702386782bf95c967a37c6a1/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/3fa205512d0db211ce7a7d4aef5f244b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/3fa205512d0db211ce7a7d4aef5f244b/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b6d14b99bfd3e5a84d7e7f801d265a08/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b6d14b99bfd3e5a84d7e7f801d265a08/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4dc7ab9c43668a7a799bfd4806a70f82/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.5.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4dc7ab9c43668a7a799bfd4806a70f82/transformed/jetified-fbcore-2.5.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4c7513bc6dfa196d449632b3937dd8e3/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/ngohoanganh/.gradle/caches/transforms-3/4c7513bc6dfa196d449632b3937dd8e3/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/ngohoanganh/Documents/React-Native/quackquack/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:5-76
+	android:name
+		ADDED from [:react-native-community_netinfo] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/@react-native-community/netinfo/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:22-73
+activity#com.masteratul.exceptionhandler.DefaultErrorScreen
+ADDED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-11:20
+	android:name
+		ADDED from [:react-native-exception-handler] /Users/ngohoanganh/Documents/React-Native/quackquack/node_modules/react-native-exception-handler/android/build/intermediates/merged_manifest/release/AndroidManifest.xml:10:19-84
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:5-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-iid:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/7b64537815d67e73df8c0405851c7773/transformed/jetified-play-services-iid-17.0.0/AndroidManifest.xml:23:22-79
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/d64544ec37ca6e803afd2090d7840b4a/transformed/jetified-play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/da1b97a57b662124da977ff974b52391/transformed/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/9f632d682c0f16409d5cfa4b59333091/transformed/jetified-startup-runtime-1.0.0/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:30:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:28:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:29:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:27:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.0.0] /Users/ngohoanganh/.gradle/caches/transforms-3/a491fe997c62915d8b5e27cb1c7ee888/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.0] /Users/ngohoanganh/.gradle/caches/transforms-3/b4f96b26a07681f60e49336d55d7ad7c/transformed/jetified-lifecycle-process-2.4.0/AndroidManifest.xml:32:17-78
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:5-110
+	android:name
+		ADDED from [com.android.installreferrer:installreferrer:1.1.2] /Users/ngohoanganh/.gradle/caches/transforms-3/d68339adac2d76c908e7afafa42e28a0/transformed/jetified-installreferrer-1.1.2/AndroidManifest.xml:9:22-107
