@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, TouchableOpacity, FlatList, Animated } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { memo, useEffect, useRef, useState } from 'react';
 import ModalPortal from 'src/components/base/ModalPortal';
 import dimens from 'src/constants/dimens';
 import { useTheme } from '@react-navigation/native';
@@ -239,7 +239,7 @@ const ModalPickTime = ({ onPress, presentMonth, presentYear }: ModalProps) => {
 	);
 };
 
-export default ModalPickTime;
+export default memo(ModalPickTime);
 
 const makeStyles = ({ colors }: extendTheme) =>
 	StyleSheet.create({

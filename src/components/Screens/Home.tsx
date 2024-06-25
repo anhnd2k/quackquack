@@ -5,7 +5,7 @@ import { useTheme } from '@react-navigation/native';
 import { extendTheme } from 'src/Themes';
 import dimens from 'src/constants/dimens';
 import { useState, useEffect } from 'react';
-import { getCurrentTime, dayToUnix, currentDayUnix, dayOfWeek } from 'src/constants/Times';
+import { getCurrentTime, dayToUnix, dayOfWeek } from 'src/constants/Times';
 import { useSelector } from 'react-redux';
 import { getInfoEmoji } from '../../reduxStore/selectorConfig';
 import DialogAlert from '../base/DialogAlert';
@@ -14,6 +14,7 @@ import { PayLoadEmoji } from 'src/reduxStore/actions/emoji';
 import IconImage from 'src/components/base/IconImage';
 import images from 'src/constants/images';
 import { homeStyle } from '../style/HomeStyle';
+import ItemDay from '../Modal/ItemDay';
 
 interface DataAfterFilter {
 	day: number;
@@ -81,8 +82,6 @@ const Home = ({ style }: { style: ViewStyle }) => {
 	const nowDate: number = nowTime.getDate();
 	const nowMonth: number = nowTime.getMonth() + 1;
 	const nowYear: number = nowTime.getFullYear();
-
-	const unixCurrentTime: number = currentDayUnix();
 
 	const [datePresent, setDatePresent] = useState<number>(nowDate);
 	const [monthPresent, setMonthPresent] = useState<number>(nowMonth);
@@ -190,30 +189,14 @@ const Home = ({ style }: { style: ViewStyle }) => {
 				{/* RENDER_CALENDER */}
 				<View style={styles.listDate}>
 					{data?.map((data: DataAfterFilter, index: number) => {
-						const itemCurrentTime = getCurrentTime(yearPresent, monthPresent, data.day);
-						const itemCurrentUnix = dayToUnix(itemCurrentTime);
-
-						const activeTouch = itemCurrentUnix <= unixCurrentTime;
-						const isDay = itemCurrentUnix === unixCurrentTime;
 						return (
-							<TouchableOpacity
-								onPress={() => console.log(itemCurrentUnix)}
-								disabled={!activeTouch}
-								style={styles.itemDay}
+							<ItemDay
+								yearPresent={yearPresent}
+								monthPresent={monthPresent}
+								data={data}
+								onPress={(unixTime) => console.log(unixTime)}
 								key={index}
-							>
-								<View
-									style={[
-										styles.childView,
-										data.day !== 0 ? styles.dayOfMonth : styles.noneOfMonth,
-										activeTouch && styles.dayActiveStyle,
-										isDay && { backgroundColor: 'red' },
-									]}
-								>
-									<Text>{data?.emojiId}</Text>
-								</View>
-								<Text style={styles.textDay}>{data.day !== 0 ? data.day : ''}</Text>
-							</TouchableOpacity>
+							/>
 						);
 					})}
 				</View>
